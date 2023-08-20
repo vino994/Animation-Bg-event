@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 99999;
+}
+span{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    transition: .3s;
+    animation: position 10s linear infinite;
+}
+@keyframes position {
+    0%{
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(0);
+    }
+    5%,95%{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(2);
+    }
+}
